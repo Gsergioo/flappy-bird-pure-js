@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url("../fonts/Pixel.ttf");
+    font-family: PIXEL;
+}
+
+h1 {
+    font-family: PIXEL;
+}
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+body > div {
+    position: relative;
+    height: 70%;
+    width: 80%;
+    border: solid 2px blue;
+    background-color: rgb(39, 157, 242);
+    overflow: hidden;
+}
+div > img {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.points {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+    color: white;
+
+    font-size: 70px;
+    font-family: PIXEL;
+    z-index: 100;
+}
+
+.gameover {
+    font-family: PIXEL;
+    font-size: 70px;
+    z-index: 100;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    text-align: center;
+}
+
+
+.obstacle {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topsquares, .bottomsquares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obstacle .small_square {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.obstacle .big_square {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.nuvem {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.nuvem:nth-child(2) {
+    top: 30%;
+    left: 80%;
+}
+
+.nuvem:nth-child(3) {
+    top: 60%;
+    left: 200px;
+}
